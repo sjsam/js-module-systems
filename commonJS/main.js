@@ -1,0 +1,40 @@
+const calculator = require('./calculate');
+        
+function getResult(form, event) {
+    event.preventDefault();
+    let resultDiv = document.getElementById('result-div');
+    resultDiv.classList.toggle('hidden');
+    let formData = new FormData(form);
+    let obj = {};
+    for (var [key, value] of formData.entries()) {
+        obj[key] = value;
+    }
+    console.log(obj);
+    debugger;
+    switch (obj['op']) {
+        case '+':
+            document.getElementById('result-value').innerHTML = calculator.c_sum(+obj['a'], obj['b']);
+            break;
+        case '-':
+            document.getElementById('result-value').innerHTML = calculator.c_difference(+obj['a'], obj['b']);
+            break;
+        case '*':
+            document.getElementById('result-value').innerHTML = calculator.c_product(+obj['a'], obj['b']);
+            break;
+        case '/':
+            document.getElementById('result-value').innerHTML = calculator.c_quotient(+obj['a'], obj['b']);
+            break;
+        default:
+            console.log('Invalid operation');
+            break;
+    }
+    setTimeout(() => {
+        resultDiv.classList.toggle('hidden');
+    }, 3000)
+}
+
+document.addEventListener("DOMContentLoaded", function(ev) {
+    document.getElementById('submit-button').onclick = (e)=>{
+        getResult(document.getElementById('small-calc'),e);
+    }
+});

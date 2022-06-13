@@ -1,0 +1,12 @@
+.xtrapad{
+    padding: 5px;
+}
+
+#result-div
+{
+    color:green;
+}
+
+.hidden{
+    display: none;
+}

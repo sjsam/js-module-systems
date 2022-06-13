@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./bundle.js"></script>
+  </head>
+  <body style="margin: 50px">
+    <h3>Simple Calculator</h3>
+    <form id="small-calc">
+      <label for="a">
+        First Number :
+        <input class="xtrapad" type="number" id="a" name="a" />
+      </label>
+      <br />
+      <span style="min-height: 30px; display: block"></span>
+      <label for="b">
+        Second Number :
+        <input class="xtrapad" type="number" id="b" name="b" />
+      </label>
+      <span style="min-height: 30px; display: block"></span>
+      <label for="op">
+        Operation :
+        <select class="xtrapad"  name="op" id="op">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+      </label>
+      <span style="min-height: 30px; display: block"></span>
+      <button
+        id="submit-button"
+        type="button">
+        Get Result
+      </button>
+    </form>
+    <span style="min-height: 30px; display: block"></span>
+    <div class="hidden" id="result-div">
+      Your result is <span id="result-value"></span>
+    </div>
+  </body>
+</html>
