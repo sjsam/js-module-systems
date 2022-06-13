@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","mappings":"AAAA;IACI,YAAY;AAChB;;AAEA;;IAEI,WAAW;AACf;;AAEA;IACI,aAAa;AACjB,C","sources":["webpack://es-modules/./src/style.css"],"sourcesContent":[".xtrapad{\n    padding: 5px;\n}\n\n#result-div\n{\n    color:green;\n}\n\n.hidden{\n    display: none;\n}"],"names":[],"sourceRoot":""}
